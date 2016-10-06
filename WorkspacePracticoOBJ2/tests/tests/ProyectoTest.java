@@ -1,13 +1,11 @@
 package tests;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import clases.Proyecto;
-import junit.framework.Assert; 
+import clases.Proyecto; 
 
 public class ProyectoTest {
 
@@ -22,5 +20,16 @@ public class ProyectoTest {
 		miProyecto.asignarRolYCantidad(5, "Desarrollador");
 		
 		assertEquals(1, miProyecto.getCantidadRoles().size());
+	}
+	
+	@Test
+	public void asignarTarea(){
+		
+		Proyecto miProyecto = new Proyecto();
+		miProyecto.asignarTarea("Configurar entorno",
+				"Preparar el entorno para iniciar el desarrollo",
+				4);
+		
+		assertEquals(1, miProyecto.getCantidadTareas());
 	}
 }
