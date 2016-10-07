@@ -24,7 +24,16 @@ public class Proyecto {
 		
 	}
 
+	public Tarea getTarea(int indice){
+		return listaTareas.get(indice);
+	}
+	
 	public Object getCantidadTareas() {
 		return listaTareas.size();
+	}
+
+	public void asignarTarea(String nombre, String descripcion, int catidadHoras, Tarea tarea) {
+		Tarea nuevaTarea = new Tarea(nombre, descripcion, catidadHoras, tarea);
+		listaTareas.add(nuevaTarea);
 	}
 }
