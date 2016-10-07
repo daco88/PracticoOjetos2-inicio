@@ -5,15 +5,16 @@ import java.util.List;
 
 public class Proyecto {
 	private List<Tarea> listaTareas = new ArrayList<>();
-	private ArrayList<ArrayList> cantidadRoles;
+	private List<ArrayList> cantidadRoles = new ArrayList<>();
 
-	public ArrayList<ArrayList> getCantidadRoles() {
-		return cantidadRoles;
+	public int getCantidadRoles() {
+		return cantidadRoles.size();
 	}
 
 	public void asignarRolYCantidad(int cantidad, String rol) {
 		ArrayList<String> tupla = new ArrayList();
-		tupla.add(cantidad, rol);
+		tupla.add(String.valueOf(cantidad));
+		tupla.add(rol);
 		cantidadRoles.add(tupla);
 	}
 

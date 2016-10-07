@@ -19,7 +19,7 @@ public class ProyectoTest {
 		Proyecto miProyecto = new Proyecto();
 		miProyecto.asignarRolYCantidad(5, "Desarrollador");
 		
-		assertEquals(1, miProyecto.getCantidadRoles().size());
+		assertEquals(1, miProyecto.getCantidadRoles());
 	}
 	
 	@Test
